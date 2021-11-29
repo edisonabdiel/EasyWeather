@@ -3,7 +3,7 @@ import dayjs from 'dayjs';
 const utc = require('dayjs/plugin/utc');
 dayjs.extend(utc);
 
-import Loading from './loading';
+import Loading from './Loader';
 import { useWeather } from '../hooks/useWeather';
 
 const WeatherCard = ({ location, units }) => {
