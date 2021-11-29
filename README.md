@@ -99,7 +99,7 @@ yarn build
 
 Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/934efba8-8e5f-4510-aab1-9558f5d6cfb9/deploy-status)](https://app.netlify.com/sites/easy-weather-pro/deploys)
+<span align="center">[![Netlify Status](https://api.netlify.com/api/v1/badges/934efba8-8e5f-4510-aab1-9558f5d6cfb9/deploy-status)](https://app.netlify.com/sites/easy-weather-pro/deploys)</span>
 
 
 <h4 align="center">Made with loads of ❤️‍🔥</h4>
