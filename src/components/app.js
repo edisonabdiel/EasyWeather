@@ -2,7 +2,12 @@ import React, { useState, useMemo, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import debounce from 'lodash-es/debounce';
 
-import { Search, Navbar, Footer, ForecastCard, WeatherCard, UnitsToggle } from './';
+import Footer from './footer';
+import NavBar from './navbar';
+import Search from './search';
+import ForecastCard from './forecast';
+import WeatherCard from './weather-card';
+import UnitsToggle from './units-toggle';
 
 const searchTimeoutInMs = 500;
 
@@ -42,7 +47,7 @@ export default function App() {
   return (
     <div className="dark:bg-black min-h-screen">
       <Router>
-        <Navbar />
+        <NavBar />
         <Switch>
           <Route exact path="/">
             <main>

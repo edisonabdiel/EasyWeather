@@ -2,7 +2,7 @@ import React from 'react';
 import dayjs from 'dayjs';
 import PropTypes from 'prop-types';
 import { useWeather } from '../hooks/useWeather';
-import Loading from './Loader';
+import Loading from './loading';
 
 const Forecast = ({ location, units }) => {
   const { forecast, isLoading, isError } = useWeather(
