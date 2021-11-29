@@ -1,11 +1,14 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
+
 import './index.css';
-import App from './components/app';
+
+import App  from './components/App';
+
 import { SWRConfig } from 'swr';
 import { createToast, destoryAllToasts } from 'vercel-toast';
 import 'vercel-toast/dist/vercel-toast.css';
-import { ThemeProvider } from './components/theme-context';
+
+import { ThemeProvider } from './lib/theme-context';
 
 ReactDOM.render(
   <SWRConfig
