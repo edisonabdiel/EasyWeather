@@ -1,4 +1,4 @@
-<h1 align="center">EasyWether</h1>
+<h1 align="center">EasyWeather</h1>
 
 <img width="1438" alt="Screenshot 2021-11-29 at 21 14 08" src="https://user-images.githubusercontent.com/43752457/143936437-688d12d1-72c1-4cba-ba2a-2994177a916f.png">
 
@@ -9,7 +9,7 @@
     <li><a href="#about-the-project">About The Project</a></li>
     <li><a href="#built-with">Built With</a></li>
     <li><a href="#dependencies">Dependencies</a></li>
-    <li><a href="#design-reasoning">Design Reasoning</a></li>
+    <li><a href="#architecture">Architecture</a></li>
     <li><a href="#API">API</a></li>
     <li><a href="#getting-started">Getting Started</a></li>
   </ol>
@@ -17,35 +17,38 @@
 
 ## About The Project
 
-RomeoCards is a demo dating app for the Erasys/trial task.
+EasyWeather is a simple yet modern and robust weather app that allows you to search for a city and get the weather forecast.
 
 ### Key Features
 
-- Modern UI
+- Modern and Clean UI
 - Extremely easy to use and intuitive
-- Display a list of users and their details in a dynamicaly generated card
-- Search for users by name and update the list in real time
+- Displays a card with detials of the current weather
+- Search for cities around the world and retrieves real-time data
 - Teastable & Scalable
-- Resposinve to different screen sizes
+- Resposinve to different screen sizes and devices
 
 ## Built With:
 
 - [React](https://reactjs.org/)
-- [Next.js](https://nextjs.org/)
 - [TailwindCSS](https://tailwindcss.com/)
-- [Ant Design](https://ant.design/)
-- [Redux Toolkit](https://redux-toolkit.js.org/)
+- [Jest](https://jestjs.io/)
 - [VS Code](https://code.visualstudio.com/)
 - [Git](https://git-scm.com/)
 
 ### Dependencies
 
 - moment.js
+- dayjs
+- PropTypes
+- lodash
+- SWR
 - React Icons
-- classnames
-- millify
+- eslint
+- prettier
+- husky
 
-## Design Reasoning
+## Architecture
 
 The app was initialised completely from scratch in order to ensure a smooth integration between React - Next - Redux RTK - TailwindCSS.
 
