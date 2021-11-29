@@ -51,18 +51,12 @@
     "eslint-plugin-jest-dom": "^2.1.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-testing-library": "^3.9.0",
-    "husky": "^3.1.0",
     "jest-fetch-mock": "^3.0.3",
     "postcss": "^7.0.36",
     "prettier": "^2.3.1",
     "pretty-quick": "^3.1.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.4",
     "tsutils": "^3.21.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged && npm run lint && npm run format && npm run check && npm run coverage"
-    }
   },
   "jest": {
     "collectCoverageFrom": [
