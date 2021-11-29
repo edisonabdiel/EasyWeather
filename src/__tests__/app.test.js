@@ -9,7 +9,7 @@ import {
   userEvent,
   Router,
 } from '../app-test-utils';
-import App from '../components/app';
+import App from '../components/App';
 import {
   mockForecastData,
   mockSearchForecastData,

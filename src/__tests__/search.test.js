@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '../app-test-utils';
-import Search from '../components/search';
+import { Search } from '../components/';
 
 const testProps = {
   error: new Error(''),

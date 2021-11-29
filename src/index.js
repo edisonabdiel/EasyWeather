@@ -8,7 +8,7 @@ import { SWRConfig } from 'swr';
 import { createToast, destoryAllToasts } from 'vercel-toast';
 import 'vercel-toast/dist/vercel-toast.css';
 
-import { ThemeProvider } from './lib/theme-context';
+import { ThemeProvider } from '../src/components/theme-context';
 
 ReactDOM.render(
   <SWRConfig

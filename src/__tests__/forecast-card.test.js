@@ -2,7 +2,7 @@ import React from 'react';
 import { cache } from 'swr';
 import { render, screen, waitForLoadingToFinish } from '../app-test-utils';
 import { mockForecastData } from '../__mocks__/weather.mock';
-import ForecastCard from '../components/forecast';
+import { ForecastCard } from '../components';
 
 const testProps = {
   location: 'Eldoret',
