@@ -1,6 +1,6 @@
 <h1 align="center">RomeoCards</h1>
 
-<img width="1438" alt="Screenshot 2021-11-27 at 18 33 32" src="https://user-images.githubusercontent.com/43752457/143691196-cbb0caa3-5c4d-4256-9dee-2b5f20f0730a.png">
+<img width="1438" alt="Screenshot 2021-11-29 at 21 14 08" src="https://user-images.githubusercontent.com/43752457/143936437-688d12d1-72c1-4cba-ba2a-2994177a916f.png">
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
