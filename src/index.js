@@ -1,17 +1,33 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./components/home/app";
+import { SWRConfig } from "swr";
+import { createToast, destoryAllToasts } from "vercel-toast";
+import "vercel-toast/dist/vercel-toast.css";
+import { ThemeProvider } from "./components/theme-context";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <SWRConfig
+    value={{
+      onError: (error) => {
+        if (error) {
+          createToast(`Error: ${error.message}`, {
+            type: "error",
+          });
+        }
+      },
+      onSuccess: (data) => {
+        if (data) {
+          destoryAllToasts();
+        }
+      },
+      shouldRetryOnError: false,
+    }}
+  >
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
+  </SWRConfig>,
+  document.getElementById("root")
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
