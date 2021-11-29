@@ -1,42 +1,39 @@
 import React from 'react';
-//Middleware
 import dayjs from 'dayjs';
 import PropTypes from 'prop-types';
-//SWR hook
 import { useWeather } from '../hooks/useWeather';
-//Custom Component
-import { Loader } from '../components';
+import Loading from './loading';
 
-import styles from './ForecastCard.module.css';
-
-const ForecastCard = ({ location, units }) => {
+const Forecast = ({ location, units }) => {
   const { forecast, isLoading, isError } = useWeather(
     'forecast',
     location,
     units,
   );
 
-  if (isLoading || isError) return <Loader />;
+  if (isLoading || isError) return <Loading />;
   
   return (
     <>
-      <div className={styles.main_wrapper}>
-        <div>
-          {forecast.map((item, index) => (
-              <ul className={styles.list} key={index}>
-                <li className={styles.list_item}>
-                  <span className={styles.day}>
+      <div className="m-4">
+        <div className="">
+          {forecast.map((item, index) => {
+            return (
+              <ul className="mt-4" key={index}>
+                <li className="flex flex-row text-gray-500 dark:text-white p-1">
+                  <span className="flex-1 text-left">
                     {dayjs(item.dt_txt).format('dddd')}
                   </span>
-                  <span className={styles.icon}>
+                  <span className="text-indigo-700 dark:text-white text-2xl">
                     <span className={item.forecastIcon}></span>
                   </span>
-                  <span className={styles.temperature}>
+                  <span className="flex-1 text-right">
                     {item.min}&deg; / {item.max}&deg;
                   </span>
                 </li>
               </ul>
-          ))}
+            );
+          })}
         </div>
       </div>
     </>
@@ -47,4 +44,4 @@ Forecast.propTypes = {
   forecast: PropTypes.array,
 };
 
-export default ForecastCard;
+export default Forecast;

@@ -1,10 +1,8 @@
-import { useState } from 'react';
-
-import styles from './UnitsToggle.module.css';
+import React from 'react';
 
 const UnitsToggle = ({ units, onUnitsChange }) => {
-  const [isSettingsMenuOpened, setIsSettingsMenuOpened] = useState(false);
-  const [isMetric, setIsMetric] = useState(
+  const [isSettingsMenuOpened, setIsSettingsMenuOpened] = React.useState(false);
+  const [isMetric, setIsMetric] = React.useState(
     units.match(/metric/i) ? true : false,
   );
 
@@ -19,10 +17,10 @@ const UnitsToggle = ({ units, onUnitsChange }) => {
   };
 
   return (
-    <div className={styles.toggle_units_container}>
+    <div className="w-full md:w-3/5 lg:w-1/2 m-auto mt-4">
       <button
         type="button"
-        className={styles.toggle_units_button}
+        className="text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-500 focus:ring-green-200 dark:focus:ring-white"
         id="toggle-units"
         aria-expanded="false"
         aria-haspopup="true"
@@ -36,7 +34,7 @@ const UnitsToggle = ({ units, onUnitsChange }) => {
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
-          className={styles.toggle_units_icon}
+          className="h-6 w-6 stroke-current text-gray-500"
         >
           <path
             strokeLinecap="round"
@@ -52,9 +50,9 @@ const UnitsToggle = ({ units, onUnitsChange }) => {
           />
         </svg>
       </button>
-      {isSettingsMenuOpened && (
+      {isSettingsMenuOpened ? (
         <div
-          className={styles.toggle_units_menu_contianer}
+          className="origin-top mt-2 w-48 rounded-md shadow-lg py-1 bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5 focus:outline-none"
           role="menu"
           aria-orientation="vertical"
           aria-labelledby="toggle settings"
@@ -62,19 +60,19 @@ const UnitsToggle = ({ units, onUnitsChange }) => {
           <ul>
             <li
               onClick={handleChange}
-              className={styles.toggle_units_menu_item}
+              className="block px-4 py-2 text-sm text-gray-700 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600"
               role="menuitem"
             >
               Change units
               <br />
-              <span className={styles.toggle_menu_units}>
+              <span className="text-xs text-indigo-500 dark:text-white">
                 {isMetric ? 'Imperial' : 'Metric'}{' '}
                 {isMetric ? `(F°, mph)` : `(C°, m/s)`}
               </span>
             </li>
           </ul>
         </div>
-      )}
+      ) : null}
     </div>
   );
 };

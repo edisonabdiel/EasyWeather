@@ -1,21 +1,19 @@
 import React from 'react';
 
-import styles from './Footer.module.css';
-
 const Footer = () => (
-    <footer className={styles.footer}>
-      <p className={styles.footer_text}>
-        <span className={styles.footer_slogan}>
+    <footer className="items-center mt-28">
+      <p className="text-center">
+        <span className="text-gray-600 dark:text-white">
           Made with ❤️‍🔥 by{' '}
           <a
-            className={styles.footer_link}
+            className="text-indigo-600 dark:text-gray-300 dark:hover:text-gray-600"
             href="https://edisonabdiel.com"
             target="_blank"
             rel="noopener noreferrer"
           >
             EdisonAbdiel
           </a>
-          <span className={styles.copyright}>&copy;2021</span>
+          <span className="m-4">&copy;2021</span>
         </span>
       </p>
     </footer>

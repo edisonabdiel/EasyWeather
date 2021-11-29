@@ -1,24 +1,24 @@
-import React from "react";
-import { cache } from "swr";
-import { render, screen, waitForLoadingToFinish } from "../app-test-utils";
-import { mockWeatherData } from "../__mocks__/weather.mock";
-import WeatherCard from "../components/weather-card";
+import React from 'react';
+import { cache } from 'swr';
+import { render, screen, waitForLoadingToFinish } from '../app-test-utils';
+import { mockWeatherData } from '../__mocks__/weather.mock';
+import WeatherCard from '../components/weather-card';
 
 const testProps = {
-  location: "Eldoret",
-  units: "metric",
+  location: 'Eldoret',
+  units: 'metric',
 };
 
 const renderWeatherCard = () => render(<WeatherCard {...testProps} />);
 
-describe("WeatherCard", () => {
+describe('WeatherCard', () => {
   beforeEach(() => {
     cache.clear();
     fetch.resetMocks();
     fetch.mockResponse(JSON.stringify(mockWeatherData));
   });
 
-  test("renders the WeatherCard", async () => {
+  test('renders the WeatherCard', async () => {
     renderWeatherCard();
 
     await waitForLoadingToFinish();
@@ -30,7 +30,7 @@ describe("WeatherCard", () => {
     expect(screen.getByText(/30m\/s winds/i)).toBeInTheDocument();
     expect(screen.getByText(/49% humidity/i)).toBeInTheDocument();
     expect(
-      screen.getByText(/'Netflix and chill' weather. It's pleasant outside/i)
+      screen.getByText(/'Netflix and chill' weather. It's pleasant outside/i),
     ).toBeInTheDocument();
   });
 });

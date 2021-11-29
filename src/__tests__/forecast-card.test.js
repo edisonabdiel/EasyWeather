@@ -1,29 +1,29 @@
-import React from "react";
-import { cache } from "swr";
-import { render, screen, waitForLoadingToFinish } from "../app-test-utils";
-import { mockForecastData } from "../__mocks__/weather.mock";
-import ForecastCard from "../components/forecast-card";
+import React from 'react';
+import { cache } from 'swr';
+import { render, screen, waitForLoadingToFinish } from '../app-test-utils';
+import { mockForecastData } from '../__mocks__/weather.mock';
+import ForecastCard from '../components/forecast-card';
 
 const testProps = {
-  location: "Eldoret",
-  units: "metric",
+  location: 'Eldoret',
+  units: 'metric',
 };
 
 const renderForecast = (testProps) => render(<ForecastCard {...testProps} />);
 
-describe("ForecastCard", () => {
+describe('ForecastCard', () => {
   beforeEach(() => {
     cache.clear();
     fetch.resetMocks();
     fetch.mockResponse(JSON.stringify(mockForecastData));
   });
 
-  test("renders the weekly forecast for the specified location", async () => {
+  test('renders the weekly forecast for the specified location', async () => {
     renderForecast(testProps);
 
     await waitForLoadingToFinish();
 
-    const forecast = screen.getAllByRole("listitem").map((listItem) => {
+    const forecast = screen.getAllByRole('listitem').map((listItem) => {
       return listItem.textContent;
     });
     expect(forecast).toMatchInlineSnapshot(`

@@ -1,21 +1,21 @@
-import dayjs from "dayjs";
-import useSWR from "swr";
-import fetcher from "../utils/fetcher";
+import dayjs from 'dayjs';
+import useSWR from 'swr';
+import fetcher from '../lib/fetcher';
 
-import * as recommendations from "../constants/recommendations";
-import * as weatherIcons from "../constants/icons";
+import * as recommendations from '../constants/recommendations';
+import * as weatherIcons from '../constants/icons';
 
-const apiUrl = "https://api.openweathermap.org/data/2.5";
+const apiUrl = 'https://api.openweathermap.org/data/2.5'
 const apiKey = process.env.REACT_APP_API_KEY;
 const iconPrefix = `wi wi-`;
 
 export function useWeather(endpoint, location, units) {
   const { data, error } = useSWR(
     `${apiUrl}/${endpoint}/?q=${location}&units=${units}&APPID=${apiKey}`,
-    fetcher
+    fetcher,
   );
 
-  if (endpoint === "weather") {
+  if (endpoint === 'weather') {
     return {
       weather: data?.weather ? mapResponseProperties(data) : null,
       isLoading: !data && !error,
@@ -57,7 +57,7 @@ function mapResponseProperties(data) {
     mapped.dt_txt = data.dt_txt;
     mapped.forecastIcon =
       iconPrefix +
-      weatherIcons.default[mapped.isDay ? "day" : "night"][mapped.icon_id].icon;
+      weatherIcons.default[mapped.isDay ? 'day' : 'night'][mapped.icon_id].icon;
   }
 
   if (data.timezone) {
@@ -79,9 +79,9 @@ function mapResponseProperties(data) {
         : false;
     mapped.weatherIcon =
       iconPrefix +
-      weatherIcons.default[mapped.isDay ? "day" : "night"][mapped.icon_id].icon;
+      weatherIcons.default[mapped.isDay ? 'day' : 'night'][mapped.icon_id].icon;
     mapped.weatherRecommendation =
-      recommendations.default[mapped.isDay ? "day" : "night"][
+      recommendations.default[mapped.isDay ? 'day' : 'night'][
         mapped.icon_id
       ].recommendation;
   }
@@ -99,7 +99,7 @@ function mapResponseProperties(data) {
 
   // remove undefined fields
   Object.entries(mapped).map(
-    ([key, value]) => value === undefined && delete mapped[key]
+    ([key, value]) => value === undefined && delete mapped[key],
   );
 
   return mapped;

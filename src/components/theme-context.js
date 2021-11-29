@@ -1,4 +1,5 @@
-import { useState, useEffect, createContext } from "react";
+import React from 'react';
+
 const getInitialTheme = () => {
   if (typeof window !== 'undefined' && window.localStorage) {
     const storedPrefs = window.localStorage.getItem('color-theme');
@@ -14,10 +15,10 @@ const getInitialTheme = () => {
   return 'light';
 };
 
-export const ThemeContext = createContext();
+export const ThemeContext = React.createContext();
 
 export const ThemeProvider = ({ initialTheme, children }) => {
-  const [theme, setTheme] = useState(getInitialTheme);
+  const [theme, setTheme] = React.useState(getInitialTheme);
 
   const rawSetTheme = (rawTheme) => {
     const root = window.document.documentElement;
@@ -31,7 +32,7 @@ export const ThemeProvider = ({ initialTheme, children }) => {
     rawSetTheme(initialTheme);
   }
 
-  useEffect(() => {
+  React.useEffect(() => {
     rawSetTheme(theme);
   }, [theme]);
 

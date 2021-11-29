@@ -1,11 +1,11 @@
-import "@testing-library/jest-dom/extend-expect";
-require("jest-fetch-mock").enableMocks();
+import '@testing-library/jest-dom/extend-expect';
+require('jest-fetch-mock').enableMocks();
 
-process.env.REACT_APP_API_URL = "https://api.openweathermap.org/data/2.5";
-process.env.REACT_APP_API_KEY = "ed09485536a14ea098e9de03ecff2d4d";
+process.env.REACT_APP_API_URL = 'https://api.openweathermap.org/data/2.5';
+process.env.REACT_APP_API_KEY = 'ed09485536a14ea098e9de03ecff2d4d';
 
 beforeAll(() =>
-  Object.defineProperty(window, "matchMedia", {
+  Object.defineProperty(window, 'matchMedia', {
     writable: true,
     value: jest.fn().mockImplementation((query) => ({
       matches: false,
@@ -17,5 +17,5 @@ beforeAll(() =>
       removeEventListener: jest.fn(),
       dispatchEvent: jest.fn(),
     })),
-  })
+  }),
 );

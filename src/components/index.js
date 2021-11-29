@@ -1,8 +1,5 @@
-export { default as App } from './home/App';
-export { default as Loader } from './loader/Loader';
-export { default as ForecastCard } from './forecastCard/ForecastCard';
-export { default as Footer } from './footer/Footer';
-export { default as Navbar } from './navbar/Navbar';
-export { default as ThemeToggle } from './themeToggle/ThemeToggle';
-export { default as UnitsToggle } from './unitsToggle/UnitsToggle';
-export { default as WeatherCard } from './weatherCard/WeatherCard';
+export { default as app } from './app';
+export { default as footer } from './footer';
+export { default as navbar } from './navbar';
+export { default as search } from './search';
+export { default as ForecastCard } from './ForecastCard';

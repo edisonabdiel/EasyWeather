@@ -1,28 +1,24 @@
-import { useContext } from 'react';
-//Icons
+import React from 'react';
 import { HiMoon, HiSun } from 'react-icons/hi';
-//Theme Context
-import { ThemeContext } from './';
-
-import styles from './ThemeToggle.module.css';
+import { ThemeContext } from './theme-context';
 
 const Toggle = () => {
-  const { theme, setTheme } = useContext(ThemeContext);
+  const { theme, setTheme } = React.useContext(ThemeContext);
 
   return (
     <div
       role="switch"
-      className={styles.toggle_button}
+      className="transition duration-500 ease-in-out rounded-full p-2"
     >
       {theme === 'dark' ? (
         <HiSun
           onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-          className={styles.toggle_icon}
+          className="text-gray-500 dark:text-gray-400 text-2xl cursor-pointer"
         />
       ) : (
         <HiMoon
           onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-          className={styles.toggle_icon}
+          className="text-gray-500 dark:text-gray-400 text-2xl cursor-pointer"
         />
       )}
     </div>

@@ -1,4 +1,7 @@
-const Loader = () => (
+import React from 'react';
+
+const Loading = () => {
+  return (
     <div className="m-16">
       <div
         role="progressbar"
@@ -19,5 +22,6 @@ const Loader = () => (
       </div>
     </div>
   );
+};
 
-export default Loader;
+export default Loading;

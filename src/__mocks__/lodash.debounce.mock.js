@@ -1,4 +1,4 @@
-//Timeout custom config for the debounce lodash method
+//Timeout custom config for the debounce lodash method 
 export default (fn, ms) => {
   let timeoutId = 0;
 

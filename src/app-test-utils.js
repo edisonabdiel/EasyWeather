@@ -1,15 +1,15 @@
-import React from "react";
-import { SWRConfig } from "swr";
+import React from 'react';
+import { SWRConfig } from 'swr';
 import {
   act,
   render,
   screen,
   waitForElementToBeRemoved,
-} from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
-import { createMemoryHistory } from "history";
-import { Router } from "react-router-dom";
-import { ThemeProvider } from "./components/theme-context";
+} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import { createMemoryHistory } from 'history';
+import { Router } from 'react-router-dom';
+import { ThemeProvider } from './components/theme-context';
 
 const Wrapper = ({ children }) => {
   return (
@@ -31,7 +31,7 @@ const waitForLoadingToFinish = () =>
     timeout: 4000,
   });
 
-export * from "@testing-library/react";
+export * from '@testing-library/react';
 export {
   act,
   screen,
