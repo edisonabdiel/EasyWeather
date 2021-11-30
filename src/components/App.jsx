@@ -1,7 +1,8 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import debounce from 'lodash-es/debounce';
 
+import debounce from 'lodash-es/debounce';
+// Custom Components
 import { Footer, Navbar, Search, ForecastCard, WeatherCard, UnitsToggle } from './';
 
 const searchTimeoutInMs = 500;

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Toggle from './Toggle';
+
+import { Toggle } from './';
 
 import { DiGithubAlt } from 'react-icons/di';
 import { TiWeatherWindyCloudy } from 'react-icons/ti';
