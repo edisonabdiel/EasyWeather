@@ -49,17 +49,17 @@ EasyWeather is a simple yet modern and robust weather app that allows you to sea
 
 ## Architecture
 
-The app was initialised completely from scratch in order to ensure a smooth integration between React - Next - Redux RTK - TailwindCSS.
+The app was initialised completely from scratch.
 
-It retrives the data using the [SWR](https://github.com/vercel/swr) <i>by</i> [vercel](https://vercel.com/). The data comes from the [OpenWeatherMap](https://openweathermap.org/) API.
+It retrives the data using the [SWR](https://github.com/vercel/swr) <i>by</i> [vercel](https://vercel.com/). The data comes from the [OpenWeatherMap](https://openweathermap.org/) API. This method was used in order to format the weather data into readable data all inside the same hook in a clean and comprehensive way.
 
-Integrates a simple yet efficient search feature that allows the user to search for users by name and update the list in real time.
+Integrates a simple yet efficient search feature that allows the user to search for different cities around the world by name and update get the weather forecast in real time. Achieved with the combination of the debounce method from lodash, a custom handler and the useMemo hook from React.
 
 Components were built in a fashion that allows for a more responsive, dynamic and scalable experience.
 
-The UI is meant to be minimalistic yet engaging and intuitive. It was built using TailwindCSS to allow great control and autonomy over the layout of the app and also the design/feel of all the elements within it.
+The UI is meant to be minimalistic yet engaging and intuitive. It was built using TailwindCSS to allow great control and autonomy over the layout of the app and also the design/feel of all the elements within it. The UI was designed to be responsive and adaptable to different screen sizes.
 
-Users are fictional and used for demo porpuses only.
+Mock data was generated with the help of [Mockaroo](https://mockaroo.com/) and the formated by hand.
 
 ## Getting Started
 
@@ -76,12 +76,13 @@ yarn add install
 Run the development server:
 
 ```bash
-npm run dev
+npm start
 # or
-yarn dev
+yarn start
 ```
 
 Run the tests
+
 ```bash
 npm test
 # or
@@ -99,7 +100,7 @@ yarn build
 
 Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-<span align="center">[![Netlify Status](https://api.netlify.com/api/v1/badges/934efba8-8e5f-4510-aab1-9558f5d6cfb9/deploy-status)](https://app.netlify.com/sites/easy-weather-pro/deploys)</span>
+<!-- <a align="center">[![Netlify Status](https://api.netlify.com/api/v1/badges/934efba8-8e5f-4510-aab1-9558f5d6cfb9/deploy-status)](https://app.netlify.com/sites/easy-weather-pro/deploys)</a> -->
 
 
-<h4 align="center">Made with loads of ❤️‍🔥</h4>
+<h4 align="center">Made with ❤️‍🔥</h4>
