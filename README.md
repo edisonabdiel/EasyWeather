@@ -22,6 +22,7 @@ EasyWeather is a simple yet modern and robust weather app that allows you to sea
 
 - Modern and Clean UI
 - Extremely easy to use and intuitive
+- Features a dark/light mode
 - Displays a card with detials of the current weather
 - Search for cities around the world and retrieves real-time data
 - Teastable & Scalable
@@ -57,7 +58,10 @@ Integrates a simple yet efficient search feature that allows the user to search 
 
 Components were built in a fashion that allows for a more responsive, dynamic and scalable experience.
 
-The UI is meant to be minimalistic yet engaging and intuitive. It was built using TailwindCSS to allow great control and autonomy over the layout of the app and also the design/feel of all the elements within it. The UI was designed to be responsive and adaptable to different screen sizes.
+The UI is meant to be minimalistic yet engaging and intuitive. 
+It was built using TailwindCSS to allow great control and autonomy over the layout of the app and also the design/feel of all the elements within it. 
+The UI was designed to be responsive and adaptable to different screen sizes. 
+It can toggle between dark/light modes to match the user's preference.
 
 Mock data was generated with the help of [Mockaroo](https://mockaroo.com/) and the formated by hand.
 
