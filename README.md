@@ -45,11 +45,12 @@ EasyWeather is a simple yet modern and robust weather app that allows you to sea
 - React Icons
 - eslint
 - prettier
+- pretty-quick
 - husky
 
 ## Architecture
 
-The app was initialised completely from scratch.
+The app was initialised using [Create React App](https://create-react-app.dev/). Then manually integrated with TailwindCSS and Jest.
 
 It retrives the data using the [SWR](https://github.com/vercel/swr) <i>by</i> [vercel](https://vercel.com/). The data comes from the [OpenWeatherMap](https://openweathermap.org/) API. This method was used in order to format the weather data into readable data all inside the same hook in a clean and comprehensive way.
 

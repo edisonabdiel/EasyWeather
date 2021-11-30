@@ -68,7 +68,7 @@ const NavBar = () => {
           <div className="hidden md:contents">
             <TiWeatherWindyCloudy className="text-4xl" />
             <Link to="/">
-              <h3 className="ml-1 text-xl font-bold">reactWeather</h3>
+              <h3 className="ml-1 text-xl font-bold">easyWeather</h3>
             </Link>
             <div className="flex-1 flex items-center justify-end sm:items-stretch sm:justify-end">
               <div className="hidden sm:block sm:ml-6">
